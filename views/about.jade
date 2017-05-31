@@ -1,0 +1,39 @@
+include mixins/buttons
+
+extends layout
+
+block content
+  #carousel-example-generic.carousel.slide(data-ride='carousel')
+    // Indicators
+    ol.carousel-indicators
+      li.active(data-target='#carousel-example-generic', data-slide-to='0')
+      li(data-target='#carousel-example-generic', data-slide-to='1')
+      li(data-target='#carousel-example-generic', data-slide-to='2')
+    // Wrapper for slides
+    .carousel-inner
+      .item.active
+        img(class="rounded-circle",src='http://placehold.it/1200x315', alt='...').rounded-circle
+        .carousel-caption
+          h3 Caption Text
+      .item
+        img(class="rounded-circle",src='http://placehold.it/1200x315', alt='...').rounded-circle
+        .carousel-caption
+          h3 Caption Text
+      .item
+        img(class="rounded-circle",src='http://placehold.it/1200x315', alt='...').rounded-circle
+        .carousel-caption
+          h3 Caption Text
+    // Controls
+    a.left.carousel-control(href='#carousel-example-generic', role='button', data-slide='prev')
+      span.glyphicon.glyphicon-chevron-left
+    a.right.carousel-control(href='#carousel-example-generic', role='button', data-slide='next')
+      span.glyphicon.glyphicon-chevron-right
+
+  .row
+    .col-md-4.col-sm-4.col-xs-4
+      img.img-circle(src='data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==', alt='Generic placeholder image', width='140', height='140')
+      h2 Heading
+      p Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.
+      +button("primary", "more.htm", "large") Details
+    .col-md-4.col-sm-4.col-xs-4
+    .col-md-4.col-sm-4.col-xs-4

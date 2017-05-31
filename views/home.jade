@@ -1,0 +1,43 @@
+include mixins/panel
+include mixins/buttons
+include mixins/list-group
+include mixins/alerts
+include mixins/bootswatch
+
+extends layout
+
+block content
+  .jumbotron
+    h1 WHY DO YOU LOVE FRIES?
+    p I LOVE FRIES SO MUCH
+    p: +button("primary", "more.htm", "large") Learn more
+  h4 GRIDS AND PANELS
+    .row
+      .col-md-4.col-sm-4.col-xs-4
+         +panel("EDWIN RONNEL BONDOC", "primary") EDWIN IS THE SHIT
+      .col-md-4.col-sm-4.col-xs-4
+         +panel("JERRY SALES", "primary") JERRY IS THE SHIT
+      .col-md-4.col-sm-4.col-xs-4
+         +panel("TIMOTHY PENARUBIA", "primary") TIMOTHY IS THE MAN
+  h4 BUTTONS AND EXAMPLES
+    .row
+      .col-md-4.col-sm-4.col-xs-4
+         +button("default", "link.htm") Default
+         +button("primary", "link.htm") primary
+         +button("success", "link.htm") success
+         +button("info", "link.htm") info
+         +button("warning", "link.htm") warning
+         +button("danger", "link.htm") danger
+      .col-md-4.col-sm-4.col-xs-4
+        +listGroup("list")
+          +listItem("active") Cras justo odio
+          +listItem Dapibus ac facilisis in
+          +listItem Morbi leo risus
+          +listItem Dapibus ac facilisis in
+          +listItem Morbi leo risus
+          +listItem Dapibus ac facilisis in
+      .col-md-4.col-sm-4.col-xs-4
+        +alert("warning") Warning! Warning!
+        +alert("danger") Danger Will Robinson!
+        +alert("success") You succeeded :-)
+        +alert("info") Some information for you

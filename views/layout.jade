@@ -1,3 +1,5 @@
+include mixins/bootswatch
+
 doctype
 html( lang="en" )
     head
@@ -6,16 +8,18 @@ html( lang="en" )
         meta( http-equiv='X-UA-Compatible', content='IE=edge' )
         meta( name='viewport', content='width=device-width, initial-scale=1.0' )
         meta( name='description', content='Baking Bootstrap Snippets with Jade' )
-        //- Bootswatch Theme
+
         link(rel='stylesheet', href='/stylesheets/style.css')
         link(rel='stylesheet', href='/static/bootstrap/dist/css/bootstrap.min.css')
+        //- Bootswatch Theme
+        +bootswatch("superhero")
+
         //Scripts
         script(src='/static/jquery/dist/jquery.min.js')
         script(src='/static/bootstrap/dist/js/bootstrap.min.js')
     body
-        include header
-
-        #content
-          block content
-
-        include footer
+        .container
+          include header
+          #content
+            block content
+          include footer
